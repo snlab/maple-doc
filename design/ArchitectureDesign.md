@@ -45,14 +45,19 @@ Following diagram demonstrates relationship between different components .
 1. UI queries data from MapleODL SP (CrossPlatform)
 2. MapleODL SP translate the request and then get data from ODL Data Store
 
-** Asynchronous callback: **
+** Asynchronous notification: **
 
 1. A event happens, for example a new switch is added
 2. MapleODL handler registered at ODL Data Store is invoked
 3. MapleODL handler pushes (e.g, SSE) the needed data json to the registered UI
 
 
-### API between GUI and ODLMaple
+### Key Components
 
-### API between MapleCore and ODLMaple
+*  Interface between MapleCore and MapleODL: [https://github.com/snlab/maple-doc/blob/master/design/MapleCore-API-Design-Document.md](https://github.com/snlab/maple-doc/blob/master/design/MapleCore-API-Design-Document.md)
 
+*  Interface between GUI and MapleODL: [https://github.com/snlab/MapleGUI/wiki/Current-REST-interface-(reference)](https://github.com/snlab/MapleGUI/wiki/Current-REST-interface-(reference))
+
+*  Asynchronous notification protocol between GUI and MapleODL: [SSE](http://www.w3.org/TR/eventsource/)
+
+*  Callback registration from MapleODL to ODL Data Store: [https://wiki.opendaylight.org/view/OpenDaylight_Controller:MD-SAL:Restconf:Change_event_notification_subscription](https://wiki.opendaylight.org/view/OpenDaylight_Controller:MD-SAL:Restconf:Change_event_notification_subscription)
