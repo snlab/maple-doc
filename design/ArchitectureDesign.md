@@ -5,7 +5,7 @@
 
 Maple system consists of the following key components:
 
-* *GUI*: <Not well defined yet. One possibility is that GUI is just an APP, such that users can write GUI in their APPs.>
+* *GUI*: (Not well defined yet. One possibility is that GUI is just an APP, such that users can write GUI in their APPs.)
 * *APPs*: applications written by users.
 * *MapleCore*:
 * *MapleAdapter<ODL>*: adapter layer between OpenDaylight and Maple system. MapleAdapter has two kinds of interfaces: (1) to MapleCore, and (2) to MapleApps.
