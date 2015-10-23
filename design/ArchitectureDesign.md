@@ -44,7 +44,7 @@ Following diagram demonstrates relationship between different components .
 1. UI queries data from MapleODL SP (CrossPlatform)
 2. MapleODL SP translate the request and then get data from ODL Data Store
 
-**Asynchronous notification: **
+**Asynchronous notification:**
 
 1. A event happens, for example a new switch is added
 2. MapleODL handler registered at ODL Data Store is invoked
