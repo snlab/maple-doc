@@ -67,7 +67,7 @@ Following diagram demonstrates relationship between different components .
 
 * **Asynchronous notification protocol between GUI and MapleODL**: [SSE](http://www.w3.org/TR/eventsource/)
   1. Given the time, we implement the first version in the following way:
-    1.  UI app periodcally query (e.g.https://github.com/snlab/MapleGUI/wiki/Current-REST-interface-(reference)).
+    1.  UI app periodcally query (e.g.https://github.com/snlab/MapleGUI/wiki/MapleHaskell-REST-Interface).
     2.  MapleODL Adapter implements the preceding.
     3.  UI app do the merge by itself.
   
