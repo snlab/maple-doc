@@ -53,7 +53,7 @@ Following diagram demonstrates relationship between different components .
 
 ### Key Components
 
-* **Interface between GUI and MapleODL**: [https://github.com/snlab/MapleGUI/wiki/Current-REST-interface-(reference)](https://github.com/snlab/MapleGUI/wiki/Current-REST-interface-(reference))
+* **Interface between GUI and MapleODL**: [https://github.com/snlab/MapleGUI/wiki/MapleHaskell-REST-Interface](https://github.com/snlab/MapleGUI/wiki/MapleHaskell-REST-Interface)
   1. What are the principles that guided our definition of the API (data model)? Does it map naturally to ODL/ONOS, or conceptually clean?
     * Approach 1: Use one community model (e.g., ODL YANG model mostly)
     * Approach 2: Appoint Shenshen as God of the model and just listens to him
