@@ -824,3 +824,47 @@ Flow object parameters
     }
 ]
 ````
+
+Ports
+=====
+
+| Endpoint | Description |
+| -------- | ----------- |
+| [GET /ports](#get-ports) | gets list of ports |
+
+###GET /ports
+
+Port object parameters
+
+| Name | Type | Notes |
+| ---- | ---- | ----- |
+| `capacity` | integer ||  
+| `number` | integer | port number |
+| `address` | string | Mac address of port |
+| `config` | string[] | |
+| `name` | string ||
+| `state` | string[] | |
+| `portUtil` | float ||
+| `rxkbps` | float ||
+| `txkbps` | float ||
+| `switch` | integer ||
+
+####Example response
+
+````json
+[ 
+    {
+        "capacity": 10000, 
+        "number": 1, 
+        "address": "2e:34:d8:40:48:d5", 
+        "config": "[]", 
+        "name": "s3-eth1", 
+        "state": [ "up" ], 
+        "portUtil": 1.3860492587246415e-08, 
+        "rxkbps": 0.0, 
+        "switch": 3, 
+        "txkbps": 0.13535637292232827
+    }, 
+    ...
+]
+````
