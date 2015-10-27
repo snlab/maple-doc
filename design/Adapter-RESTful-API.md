@@ -3,9 +3,9 @@ Topology
 
 | Endpoint | Description |
 | -------- | ----------- |
-| [GET /v0/topology/:topology-id](#get-topology) | gets network topology graph data |
-| [GET /v0/hostlocations](#get-hostlocations) | gets locations of hosts in the network |
-| [GET /v0/flows](#get-flows) | gets all flows in the network (WIP) |
+| [GET /v0/topology/:topology-id](#get-v0topologytopology-id) | gets network topology graph data |
+| [GET /v0/hostlocations](#get-v0hostlocations) | gets locations of hosts in the network |
+| [GET /v0/flows](#get-v0flows) | gets all flows in the network (WIP) |
 
 ###GET /v0/topology/:topology-id
 
@@ -843,7 +843,7 @@ FIB
 
 | Endpoint | Description |
 | -------- | ----------- |
-| [GET /v0/fib](#get-fib) | gets list of FIB rules |
+| [GET /v0/fib](#get-v0fib) | gets list of FIB rules |
 
 FIB
 ====
@@ -890,7 +890,7 @@ Ports
 
 | Endpoint | Description |
 | -------- | ----------- |
-| [GET /v0/ports](#get-ports) | gets list of ports |
+| [GET /v0/ports](#get-v0ports) | gets list of ports |
 
 ###GET /v0/ports
 
