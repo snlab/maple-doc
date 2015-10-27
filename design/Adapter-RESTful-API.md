@@ -1,3 +1,9 @@
+Adapter RESTful API Reference
+=======================
+Version 0 
+
+See also: [legacy MapleHaskell RESTful API reference.](https://github.com/snlab/MapleGUI/wiki/MapleHaskell-REST-Interface)
+
 Topology
 ========
 
