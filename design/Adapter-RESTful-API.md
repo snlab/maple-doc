@@ -3,13 +3,26 @@ Topology
 
 | Endpoint | Description |
 | -------- | ----------- |
-| [GET /topology](#get-topology) | gets network topology graph data |
-| [GET /hostlocations](#get-hostlocations) | gets locations of hosts in the network |
-| [GET /flows](#get-flows) | gets all flows in the network (WIP) |
+| [GET /v0/topology/:topology-id](#get-topology) | gets network topology graph data |
+| [GET /v0/hostlocations](#get-hostlocations) | gets locations of hosts in the network |
+| [GET /v0/flows](#get-flows) | gets all flows in the network (WIP) |
 
-###GET /topology/<topology-id>
+###GET /v0/topology/:topology-id
 
-Parameters
+Get parameters
+
+| Name | Notes |
+| ---- | ---- |
+| `:topology-id` | integer or 'default' |
+
+####Example query
+
+````bash
+# using HTTPie by jkbrzt
+http GET localhost:3000/v0/topology/default
+````
+
+Return parameters
 
 | Name | Type |
 | ---- | ---- |
@@ -55,7 +68,7 @@ Node object parameters
 }
 ````
 
-###GET /hostlocations
+###GET /v0/hostlocations
 
 Host object parameters
 
@@ -78,7 +91,7 @@ Host object parameters
 ]
 ````
 
-###GET /flows (WIP)
+###GET /v0/flows (WIP)
 
 Flow object parameters
 
@@ -830,12 +843,12 @@ FIB
 
 | Endpoint | Description |
 | -------- | ----------- |
-| [GET /fib](#get-fib) | gets list of FIB rules |
+| [GET /v0/fib](#get-fib) | gets list of FIB rules |
 
 FIB
 ====
 
-###GET /fib
+###GET /v0/fib
 
 Fib object parameters
 
@@ -877,9 +890,9 @@ Ports
 
 | Endpoint | Description |
 | -------- | ----------- |
-| [GET /ports](#get-ports) | gets list of ports |
+| [GET /v0/ports](#get-ports) | gets list of ports |
 
-###GET /ports
+###GET /v0/ports
 
 Port object parameters
 
