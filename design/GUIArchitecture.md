@@ -1,7 +1,7 @@
 Web GUI architecture
 ====================
 
-Currently, the GUI heavily leans on Google's AngularJS framework. Extending the GUI is as simple as creating a new controller (JS) and defining a new view model (Angular-extended HTML).
+Architecturally, the GUI heavily leans on Google's AngularJS framework. Extending the GUI is as simple as creating a new controller (JS) and defining a new view model (Angular-extended HTML).
 
 ``maple.js`` is the main entry point for the web GUI. Controllers can be defined inline in ``maple.js``, though generally it's best to keep separate modules in separate ``.js`` files. Likewise, view models are best defined in their own ``.html`` files.
 
@@ -87,3 +87,5 @@ mapleApp.config(['$routeProvider',
 ````
 
 Now if we ``make install`` the web app, run maple with mininet, and go to ``http://localhost:3000/simpleFIB``, the simpleFIB extension will be displayed.
+
+Note that extensions do not have to conform to the AngularJS philosophy. Extension authors are free to use their own libraries and frameworks as seen fit, and AngularJS need only provide simple entry point to a self-contained extension app.
