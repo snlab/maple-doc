@@ -58,6 +58,7 @@ Node object parameters
 {
     "links": [
         {
+            "linkID": 0,
             "sourceNode": 1, 
             "sourcePort": 1, 
             "destinationNode": 2, 
@@ -850,9 +851,6 @@ FIB
 | Endpoint | Description |
 | -------- | ----------- |
 | [GET /v0/fib](#get-v0fib) | gets list of FIB rules |
-
-FIB
-====
 
 ###GET /v0/fib
 
