@@ -825,6 +825,53 @@ Flow object parameters
 ]
 ````
 
+FIB
+====
+
+| Endpoint | Description |
+| -------- | ----------- |
+| [GET /fib](#get-fib) | gets list of FIB rules |
+
+FIB
+====
+
+###GET /fib
+
+Fib object parameters
+
+| Name | Type |
+| ---- | ---- |
+| `inPort` | integer |
+| `match` | string |
+| `outPorts` | [{Left: integer, Right: {contents:[], tag:string}}] ?? |
+| `priority` | integer |
+| `switch` | integer |
+
+####Example response
+
+````json
+[
+    {
+        "inPort": 4, 
+        "match": "<dstEth=00:00:00:00:00:09>", 
+        "outPorts": [
+            {
+                "Right": {
+                    "contents": [], 
+                    "tag": "StripVLAN"
+                }
+            }, 
+            {
+                "Left": 3
+            }
+        ], 
+        "priority": 0, 
+        "switch": 4
+    },
+    ...
+]
+````
+
 Ports
 =====
 
