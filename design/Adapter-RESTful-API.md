@@ -5,7 +5,7 @@ Topology
 | -------- | ----------- |
 | [GET /v0/topology/:topology-id](#get-v0topologytopology-id) | gets network topology graph data |
 | [GET /v0/hostlocations](#get-v0hostlocations) | gets locations of hosts in the network |
-| [GET /v0/flows](#get-v0flows) | gets all flows in the network (WIP) |
+| [GET /v0/flows](#get-v0flows-wip) | gets all flows in the network (WIP) |
 
 ###GET /v0/topology/:topology-id
 
