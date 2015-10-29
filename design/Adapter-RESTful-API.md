@@ -962,8 +962,8 @@ Return parameters
 | ---- | ---- | ---- |
 | `id` | integer | |
 | `predicateID` | integer | id of "from" node |
-| `operator` | string | label describing the operation (EG: "==", ">", "<") |
-| `condition` | Object | the result to apply the boolean against |
+| `operator` | string | label describing the operation (EG: "==", "!=", ">", "<") |
+| `condition` | Object | the result to apply the operator against |
 | `destinationID` | integer | id of "to" node |
 
 ####Example response
