@@ -962,8 +962,8 @@ Return parameters
 | ---- | ---- | ---- |
 | `id` | integer | |
 | `predicateID` | integer | id of "from" node |
-| `operator` | string | label describing the operation (EG: "==", "!=", ">", "<") |
-| `condition` | Object | the result to apply the operator against |
+| `operator` | string | label describing the operation (EG: "==", "!=", ">", "<", "else") |
+| `condition` | Object | the result to apply the operator against; or null if the predicate node is a T node |
 | `destinationID` | integer | id of "to" node |
 
 ####Example response
@@ -992,6 +992,13 @@ Return parameters
             "operator": "==",
             "condition": 1, 
             "destinationID": 1, 
+        },
+        {
+            "id": 1,
+            "predicateID": 1,
+            "operator": "!=",
+            "condition": 1, 
+            "destinationID": 2, 
         },
         ...
     ], 
