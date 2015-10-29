@@ -948,8 +948,8 @@ Return parameters
 
 | Name | Type | Notes |
 | ---- | ---- | ----- |
-| `tt-nodes` | TTNode[] ||  
-| `tt-links` | TTLink[] ||
+| `ttnodes` | TTNode[] ||  
+| `ttlinks` | TTLink[] ||
 
 ####TTNode parameters
 | Name | Type | Notes |
@@ -970,7 +970,7 @@ Return parameters
 
 ````json
 {
-    "tt-nodes": [
+    "ttnodes": [
         {
             "id": 0,
             "type": "srcMac",
@@ -985,7 +985,7 @@ Return parameters
         }
         ...
     ],
-    "tt-links": [
+    "ttlinks": [
         {
             "id": 0,
             "predicateID": 0,
