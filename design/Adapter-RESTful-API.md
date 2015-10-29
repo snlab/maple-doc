@@ -966,6 +966,8 @@ Return parameters
 | `condition` | Object | the result to apply the boolean against |
 | `destinationID` | integer | id of "to" node |
 
+####Example response
+
 ````json
 {
     "tt-nodes": [
