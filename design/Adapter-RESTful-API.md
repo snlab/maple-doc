@@ -932,3 +932,66 @@ Port object parameters
     ...
 ]
 ````
+
+TT
+=====
+
+| Endpoint | Description |
+| -------- | ----------- |
+| [GET /v0/tt](#get-v0tt) | gets trace tree structure |
+
+###GET /v0/tt
+
+Return parameters
+
+####Example response
+
+| Name | Type | Notes |
+| ---- | ---- | ----- |
+| `tt-nodes` | TTNode[] ||  
+| `tt-links` | TTLink[] ||
+
+####TTNode parameters
+| Name | Type | Notes |
+| ---- | ---- | ----- |
+| `id` | integer ||
+| `type` | string | The label describing the predicate/action |
+
+####TTLink parameters
+| Name | Type | Notes |
+| ---- | ---- | ---- |
+| `id` | integer | |
+| `predicateID` | integer | id of "from" node |
+| `operator` | string | label describing the operation (EG: "==", ">", "<") |
+| `condition` | Object | the result to apply the boolean against |
+| `destinationID` | integer | id of "to" node |
+
+````json
+{
+    "tt-nodes": [
+        {
+            "id": 0,
+            "type": "srcMac",
+        }, 
+        {
+            "id": 1,
+            "type": "dstMac",
+        },
+        {
+            "id": 2,
+            "type": "drop",
+        }
+        ...
+    ],
+    "tt-links": [
+        {
+            "id": 0,
+            "predicateID": 0,
+            "operator": "==",
+            "condition": 1, 
+            "destinationID": 1, 
+        },
+        ...
+    ], 
+}
+````
