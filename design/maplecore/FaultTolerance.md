@@ -12,20 +12,20 @@ Maple system should be able to recover when the following bad things happen:
 ## What need to be backup?
 
  1. Hard state must be stored in persistent storage.
-    What is hard state?
+    Q: What is hard state?
  
  2. Soft state (trace tree) has two options. I'm using option 2 in my design.
     * stored in persistent storage.
-    * duplicate and store a copy on each controllers.
+    * duplicate data and store a copy on each controllers.
    
 
 ## A rudimentary fault tolerance design
 
  * Leader election algorithm (Paxos) can be used to elect Master controller in a environment where controller may leave and join in randomly.
- * Update on soft state (Trace Tree) on Master will be propergated to backup controllers using a strong-consistency model, for example, Two-Phrase Commit algorithm. After all of the controllers have uptodate TT, the master sends Openflow rules to switches to reflect the change of TT.
- * Update on hard state (e.g. user configuration) on Master will be first stored in persistent storage and then take effect.
+ * Update on soft state (Trace Tree) on Master will be propergated to backup controllers using a strong-consistency model, for example, two-phrase commit algorithm. After all of the controllers have uptodate TT, the master sends Openflow rules to switches to reflect the change on TT.
+ * Update on hard state (e.g. user configuration) on Master will be first stored in persistent storage and then takes effect.
  
- * When a backup controller becomes online, it first loads hard start from persistent storage, and then pull soft state (trace tree) from one of other backup controllers (to avoid overkill Master) and then receives updates from master.
+ * When a backup controller becomes online, it first loads hard start from persistent storage, and then pull soft state (trace tree) from one of other backup controllers (to avoid overkilling Master) and then receives update from master.
  
  * When a backup controller becomes Master, it first loads hard start from persistent storage and then takeover.
  
