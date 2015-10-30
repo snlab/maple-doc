@@ -21,13 +21,13 @@ Maple system should be able to recover when the following bad things happen:
 
 ## A rudimentary fault tolerance design
 
- * Leader election algorithm (Paxos) can be used to elect Master controller in a environment where controller may leave and join in randomly.
+ * Leader election algorithm in Chubby can be used to elect Master controller in a environment where controller may leave and join in randomly.
  * Update on soft state (Trace Tree) on Master will be propergated to backup controllers using a strong-consistency model, for example, two-phrase commit algorithm. After all of the controllers have uptodate TT, the master sends Openflow rules to switches to reflect the change on TT.
- * Update on hard state (e.g. user configuration) on Master will be first stored in persistent storage and then takes effect.
+ * Update on hard state (e.g. user configuration) on Master will be firststored in persistent storage and then takes effect.
  
- * When a backup controller becomes online, it first loads hard start from persistent storage, and then pull soft state (trace tree) from one of other backup controllers (to avoid overkilling Master) and then receives update from master.
+ * When a backup controller becomes online, it first loads hard state from persistent storage, and then pull soft state (trace tree) from one of other backup controllers (to avoid overkilling Master) and then receives update from master.
  
- * When a backup controller becomes Master, it first loads hard start from persistent storage and then takeover.
+ * When a backup controller becomes Master, it first loads hard state from persistent storage and then takeover.
  
  * When a server become online and is then **immediately** elected as Master (didn't receive any soft state), it knows issue 4 happens. Hence the Master initializes both controllers and switches and run the network from scratch.
 
